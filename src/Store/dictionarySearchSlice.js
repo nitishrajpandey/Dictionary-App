@@ -3,7 +3,7 @@ import { fetchDictionary } from "../Api";
 
 export const fetchDictionaryApi = createAsyncThunk("fetchDictionarys", async (inputData) => {
     const data = await fetchDictionary(inputData)
-    console.log(data);
+
 
     return data
 })

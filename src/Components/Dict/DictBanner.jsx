@@ -4,7 +4,7 @@ import { GiSpeaker } from "react-icons/gi";
 import useSoundListen from "../../hooks/useSoundListen";
 
 function DictBanner() {
-  const data = useSelector((state) => state.dictionary.dictionaryData);
+  const data = useSelector((state) => state.dictionary?.dictionaryData);
 
   const firstNonNullAudio = data[0]?.phonetics.find((pho) => pho.audio);
 

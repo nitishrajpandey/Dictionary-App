@@ -8,16 +8,13 @@ function Body() {
   const dicData = useSelector(
     (state) => state.dictionary.dictionaryData[0]?.word
   );
-  const dicData1 = useSelector((state) => state.dictionary.dictionaryData);
-  console.log(dicData1);
-  console.log(dicData);
 
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchDictionaryApi());
   }, []);
 
-  if (dicData === "undefined") {
+  if (dicData === "undefined" || dicData === undefined) {
     return (
       <div className="flex flex-col gap-3 justify-center items-center h-[70vh] ">
         <h1 className="text-bold italic text-6xl">My Dictionary</h1>

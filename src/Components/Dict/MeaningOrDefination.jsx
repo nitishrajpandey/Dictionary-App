@@ -5,7 +5,6 @@ function MeaningOrDefination() {
   const data = useSelector(
     (state) => state?.dictionary?.dictionaryData[0]?.meanings
   );
-  console.log(data);
 
   return (
     <div className="pt-7">
